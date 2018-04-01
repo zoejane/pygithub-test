@@ -35,3 +35,17 @@ for a_commit in all_commits:
 	print(a_commit.sha)
 	print(a_commit.commit.message)
 	print("\n")
+
+# learn more about get_issues_comments
+# http://pygithub.readthedocs.io/en/latest/github_objects/IssueComment.html#github.IssueComment.IssueComment.updated_at
+all_issues = repo_obj.get_issues_comments(since = datetime.datetime.now() - datetime.timedelta(days = 7))
+
+for an_issue in all_issues:
+	# learn more about body
+	# http://pygithub.readthedocs.io/en/latest/github_objects/IssueComment.html#github.IssueComment.IssueComment.updated_at
+	print(an_issue.body)
+	print("updated at")
+	# learn more about updated_at
+	# http://pygithub.readthedocs.io/en/latest/github_objects/IssueComment.html#github.IssueComment.IssueComment.updated_at
+	print(an_issue.updated_at)
+	print("\n")
