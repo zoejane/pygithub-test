@@ -33,6 +33,11 @@ all_commits = repo_obj.get_commits(sha = branch_name, since = datetime.datetime.
 
 for a_commit in all_commits:
 	print(a_commit.sha)
+	# get_commits Return  type:github.PaginatedList.PaginatedList of github.Commit.Commit
+	# learn more about commit
+	# http://pygithub.readthedocs.io/en/latest/github_objects/Commit.html#github.Commit.Commit.commit
+	# learn more about message
+	# http://pygithub.readthedocs.io/en/latest/github_objects/GitCommit.html#github.GitCommit.GitCommit.message
 	print(a_commit.commit.message)
 	print("\n")
 
